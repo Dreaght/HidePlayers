@@ -8,18 +8,18 @@ public class Config {
     private FileConfiguration config = plugin.getConfig();
 
     public void resetConfig() {
-        if (config.getString("world-name") == null) {
+        //if (config.getString("world-name") == null) {
             config.set("world-name", plugin.getServer().getWorlds().get(0).getName());
-        }
-        if (config.getString("hide-item-name") == null) {
+        //}
+        //if (config.getString("hide-item-name") == null) {
             config.set("hide-item-name", "§fPlayers: §cHidden §7(Right Click)");
-        }
-        if (config.getString("show-item-name") == null) {
-            config.set("hide-item-name", "§fPlayers: §Visible §7(Right Click)");
-        }
-        if (config.getString("slot") == null) {
+        //}
+        //if (config.getString("show-item-name") == null) {
+            config.set("show-item-name", "§fPlayers: §aVisible §7(Right Click)");
+        //}
+        //if (config.getString("slot") == null) {
             config.set("slot", 7);
-        }
+        //}
 
         plugin.saveConfig();
     }

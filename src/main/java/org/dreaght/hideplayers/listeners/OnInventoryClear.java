@@ -6,6 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.PlayerInventory;
+import org.dreaght.hideplayers.utils.PlayerHider;
 import org.dreaght.hideplayers.utils.VisibilityItems;
 
 public class OnInventoryClear implements Listener {
@@ -16,7 +17,11 @@ public class OnInventoryClear implements Listener {
 
         if (inventory.equals(player.getInventory())) {
             if (player.getInventory().isEmpty()) {
-                VisibilityItems.changeItemState(inventory);
+                if (PlayerHider.inHiders(player)) {
+                    VisibilityItems.giveShowItemToPlayer(inventory);
+                } else {
+                    VisibilityItems.giveHideItemToPlayer(inventory);
+                }
             }
         }
     }
