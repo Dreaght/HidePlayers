@@ -1,0 +1,6 @@
+name: HidePlayers
+version: '${project.version}'
+main: org.dreaght.hideplayers.HidePlayers
+description: Players visibility plugin
+author: Dreaght
+api-version: '1.18'
