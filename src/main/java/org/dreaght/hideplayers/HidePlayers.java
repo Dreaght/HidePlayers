@@ -7,21 +7,20 @@ import org.dreaght.hideplayers.listeners.OnItemUse;
 import org.dreaght.hideplayers.listeners.OnJoin;
 
 public final class HidePlayers extends JavaPlugin {
-    private static HidePlayers instance;
+    private static Config config;
 
-    public static HidePlayers getInstance() {
-        return instance;
+    public static Config getCfg() {
+        return config;
     }
 
     @Override
     public void onEnable() {
-        instance = this;
-
         this.saveDefaultConfig();
-        new Config().resetConfig();
+
+        config = new Config(this);
 
         getServer().getPluginManager().registerEvents(new OnJoin(), this);
-        getServer().getPluginManager().registerEvents(new OnItemUse(this), this);
+        getServer().getPluginManager().registerEvents(new OnItemUse(), this);
         getServer().getPluginManager().registerEvents(new OnItemDrop(), this);
         getServer().getPluginManager().registerEvents(new OnInventoryClear(), this);
     }

@@ -5,10 +5,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.inventory.ItemStack;
 import org.dreaght.hideplayers.Config;
+import org.dreaght.hideplayers.HidePlayers;
 import org.dreaght.hideplayers.utils.VisibilityItems;
 
 public class OnItemDrop implements Listener {
-    private static final int VISIBILITY_ITEM_SLOT = new Config().getSlot();
+    private static final int VISIBILITY_ITEM_SLOT = HidePlayers.getCfg().getSlot();
 
     @EventHandler
     public void onDrop(PlayerDropItemEvent event) {

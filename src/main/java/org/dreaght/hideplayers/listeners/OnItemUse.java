@@ -9,18 +9,12 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
-import org.bukkit.plugin.Plugin;
-import org.dreaght.hideplayers.Config;
+import org.dreaght.hideplayers.HidePlayers;
 import org.dreaght.hideplayers.utils.PlayerHider;
 import org.dreaght.hideplayers.utils.VisibilityItems;
 
 public class OnItemUse implements Listener {
-    private final Plugin plugin;
-    private static final int VISIBILITY_ITEM_SLOT = new Config().getSlot();
-
-    public OnItemUse(Plugin plugin) {
-        this.plugin = plugin;
-    }
+    private static final int VISIBILITY_ITEM_SLOT = HidePlayers.getCfg().getSlot();
 
     @EventHandler
     public void onClick(PlayerInteractEvent event) {

@@ -8,6 +8,7 @@ import org.bukkit.event.player.PlayerEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.PlayerInventory;
 import org.dreaght.hideplayers.Config;
+import org.dreaght.hideplayers.HidePlayers;
 import org.dreaght.hideplayers.utils.PlayerHider;
 import org.dreaght.hideplayers.utils.VisibilityItems;
 
@@ -25,7 +26,7 @@ public class OnJoin implements Listener {
     private void handleJoining(PlayerEvent event) {
         Player player = event.getPlayer();
 
-        if (!player.getWorld().getName().equals(new Config().getWorldName())) {
+        if (!player.getWorld().getName().equals(HidePlayers.getCfg().getWorldName())) {
             return;
         }
 

@@ -1,20 +1,19 @@
 package org.dreaght.hideplayers.utils;
 
 import org.bukkit.Material;
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
-import org.dreaght.hideplayers.Config;
+import org.dreaght.hideplayers.HidePlayers;
 
 public class VisibilityItems {
     public static Plugin plugin;
 
-    private static final int VISIBILITY_ITEM_SLOT = new Config().getSlot();
+    private static final int VISIBILITY_ITEM_SLOT = HidePlayers.getCfg().getSlot();
 
-    public static final ItemStack HIDE_ITEM = createItemStack(Material.LIME_DYE, 1, new Config().getItemName("hide-item-name"));
-    public static final ItemStack SHOW_ITEM = createItemStack(Material.RED_DYE, 1, new Config().getItemName("show-item-name"));
+    public static final ItemStack HIDE_ITEM = createItemStack(Material.LIME_DYE, 1, HidePlayers.getCfg().getItemName("hide-item-name"));
+    public static final ItemStack SHOW_ITEM = createItemStack(Material.RED_DYE, 1, HidePlayers.getCfg().getItemName("show-item-name"));
 
     public VisibilityItems(Plugin plugin) {
         this.plugin = plugin;

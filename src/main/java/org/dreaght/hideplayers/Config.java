@@ -4,8 +4,14 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.Plugin;
 
 public class Config {
-    private Plugin plugin = HidePlayers.getInstance();
-    private FileConfiguration config = plugin.getConfig();
+    private final Plugin plugin;
+    private final FileConfiguration config;
+
+    public Config(Plugin plugin) {
+        this.plugin = plugin;
+        this.config = plugin.getConfig();
+        resetConfig();
+    }
 
     public void resetConfig() {
         if (config.getString("world-name") == null) {
