@@ -1,14 +1,14 @@
-package org.dreaght.hideplayers.listeners;
+package org.dreaght.hideplayers.listener;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.PlayerInventory;
-import org.dreaght.hideplayers.utils.PlayerHider;
-import org.dreaght.hideplayers.utils.VisibilityItems;
+import org.dreaght.hideplayers.util.PlayerHider;
+import org.dreaght.hideplayers.util.VisibilityItems;
 
-public class OnInventoryClear implements Listener {
+public class InventoryListener implements Listener {
     @EventHandler
     public void onInventoryClose(InventoryCloseEvent event) {
         Player player = (Player) event.getPlayer();

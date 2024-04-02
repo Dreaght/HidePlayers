@@ -1,14 +1,13 @@
-package org.dreaght.hideplayers.listeners;
+package org.dreaght.hideplayers.listener;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.inventory.ItemStack;
-import org.dreaght.hideplayers.Config;
 import org.dreaght.hideplayers.HidePlayers;
-import org.dreaght.hideplayers.utils.VisibilityItems;
+import org.dreaght.hideplayers.util.VisibilityItems;
 
-public class OnItemDrop implements Listener {
+public class DropListener implements Listener {
     private static final int VISIBILITY_ITEM_SLOT = HidePlayers.getCfg().getSlot();
 
     @EventHandler

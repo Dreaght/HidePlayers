@@ -1,10 +1,10 @@
 package org.dreaght.hideplayers;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.dreaght.hideplayers.listeners.OnInventoryClear;
-import org.dreaght.hideplayers.listeners.OnItemDrop;
-import org.dreaght.hideplayers.listeners.OnItemUse;
-import org.dreaght.hideplayers.listeners.OnJoin;
+import org.dreaght.hideplayers.listener.InventoryListener;
+import org.dreaght.hideplayers.listener.DropListener;
+import org.dreaght.hideplayers.listener.ItemUseListener;
+import org.dreaght.hideplayers.listener.JoinListener;
 
 public final class HidePlayers extends JavaPlugin {
     private static Config config;
@@ -19,9 +19,9 @@ public final class HidePlayers extends JavaPlugin {
 
         config = new Config(this);
 
-        getServer().getPluginManager().registerEvents(new OnJoin(), this);
-        getServer().getPluginManager().registerEvents(new OnItemUse(), this);
-        getServer().getPluginManager().registerEvents(new OnItemDrop(), this);
-        getServer().getPluginManager().registerEvents(new OnInventoryClear(), this);
+        getServer().getPluginManager().registerEvents(new JoinListener(), this);
+        getServer().getPluginManager().registerEvents(new ItemUseListener(), this);
+        getServer().getPluginManager().registerEvents(new DropListener(), this);
+        getServer().getPluginManager().registerEvents(new InventoryListener(), this);
     }
 }

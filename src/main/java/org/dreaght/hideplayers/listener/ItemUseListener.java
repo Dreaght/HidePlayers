@@ -1,6 +1,5 @@
-package org.dreaght.hideplayers.listeners;
+package org.dreaght.hideplayers.listener;
 
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
@@ -10,10 +9,10 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.dreaght.hideplayers.HidePlayers;
-import org.dreaght.hideplayers.utils.PlayerHider;
-import org.dreaght.hideplayers.utils.VisibilityItems;
+import org.dreaght.hideplayers.util.PlayerHider;
+import org.dreaght.hideplayers.util.VisibilityItems;
 
-public class OnItemUse implements Listener {
+public class ItemUseListener implements Listener {
     private static final int VISIBILITY_ITEM_SLOT = HidePlayers.getCfg().getSlot();
 
     @EventHandler

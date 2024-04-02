@@ -1,4 +1,4 @@
-package org.dreaght.hideplayers.listeners;
+package org.dreaght.hideplayers.listener;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -7,12 +7,11 @@ import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.PlayerInventory;
-import org.dreaght.hideplayers.Config;
 import org.dreaght.hideplayers.HidePlayers;
-import org.dreaght.hideplayers.utils.PlayerHider;
-import org.dreaght.hideplayers.utils.VisibilityItems;
+import org.dreaght.hideplayers.util.PlayerHider;
+import org.dreaght.hideplayers.util.VisibilityItems;
 
-public class OnJoin implements Listener {
+public class JoinListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         handleJoining(event);

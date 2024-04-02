@@ -1,4 +1,4 @@
-package org.dreaght.hideplayers.utils;
+package org.dreaght.hideplayers.util;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
